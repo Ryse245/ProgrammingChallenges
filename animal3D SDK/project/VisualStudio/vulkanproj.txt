@@ -1,0 +1,1 @@
+copy OpenGL folder, rename to vulkan, open .vcxproj file and change "animal3DA3DGOpenGL" to "animal3DA3DGVulkan"
