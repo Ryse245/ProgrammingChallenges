@@ -24,18 +24,10 @@
 
 #version 450
 
-//Pseudocode
-layout in texture objTexture
-layout in vec2 texCoord	//Where on the texture we get the color data
-
 layout (location = 0) out vec4 rtFragColor;
 
 void main()
 {
 	// DUMMY OUTPUT: all fragments are OPAQUE ORANGE
-	//rtFragColor = vec4(1.0, 0.5, 0.0, 1.0);
-
-	
-	//Pseudocode
-	rtFragColor = vec4(objTexture(texCoord))	//Gets the required color at the defined texture coordinate
+	rtFragColor = vec4(1.0, 0.5, 0.0, 1.0);
 }

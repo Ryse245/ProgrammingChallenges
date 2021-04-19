@@ -39,6 +39,4 @@ void main()
 
 	vVertexID = gl_VertexID;
 	vInstanceID = gl_InstanceID;
-
-	
 }

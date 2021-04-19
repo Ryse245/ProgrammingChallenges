@@ -475,21 +475,6 @@ void a3postproc_render(a3_DemoState const* demoState, a3_DemoMode1_PostProc cons
 		a3shaderUniformSendFloatMat(a3unif_mat4, 0, currentDemoProgram->uMVP, 1, fsq.mm);
 		a3shaderUniformSendFloatMat(a3unif_mat4, 0, currentDemoProgram->uAtlas, 1, a3mat4_identity.mm);
 		a3shaderUniformSendFloat(a3unif_vec4, currentDemoProgram->uColor, 1, a3vec4_one.v);
-
-		//Programming Challenge Pseudocode
-		//Vertex
-		//a3shaderUniformSendFloat(a3unif_vec4, currentDemoProgram->uP, 1, a3vec4_one.v);	//Position
-		//a3shaderUniformSendFloat(a3unif_vec4, currentDemoProgram->uNormal, 1, a3vec4_one.v);	//Normal
-		//a3shaderUniformSendFloat(a3unif_vec4, currentDemoProgram->uTangent, 1, a3vec4_one.v);	//Tangent
-		//Alternatively, could pass the whole vector array object data to the vertex shader; this would solve
-		//My issue of not having enough information to create surfaces from the vectors given, but I do not know what data type I would send it as (matrix?)
-		//Send correct-sized matrices for positions, normals, and tangents of a number of vertices
-
-		//Fragment
-		//a3shaderUniformSendFloat(a3unif_vec2, currentDemoProgram->uTextureCoord);	//Texture Coordinate
-		//a3shaderUniformSendTexture(currentDemoProgram->uObjTexture);	//Texture
-
-
 		a3vertexDrawableRenderActive();
 	}
 

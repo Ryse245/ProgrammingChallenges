@@ -25,17 +25,9 @@
 #version 450
 
 layout (location = 0) in vec4 aPosition;
-layout (location = 1) in vec4 aNorm;
-layout (location = 2) in vec4 aTangent;
-//Or get matrices including all vertecies in object
-layout (location = 0) in mat4 aVertexPositions;
-layout (location = 1) in mat4 aVertexNorms;
-layout (location = 2) in mat4 aVertexTangents;
 
 flat out int vVertexID;
 flat out int vInstanceID;
-
-out mat4 vSurface
 
 void main()
 {
@@ -44,9 +36,4 @@ void main()
 
 	vVertexID = gl_VertexID;
 	vInstanceID = gl_InstanceID;
-
-	//PROGRAMMING CHALLENGE
-	//Need to actually create surfaces based on input data
-	//Issue: need more than one vector to make triangle for rendering
-	vSurface: //calculate surface based on position matrix and normal matrix
 }
